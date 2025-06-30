@@ -1,0 +1,17 @@
+{
+  "name": "adapt-ml-slider",
+  "version": "4.0.3",
+  "framework": ">=5.19.1",
+  "homepage": "https://github.com/adaptlearning/adapt-ml-slider",
+  "bugs": "https://github.com/adaptlearning/adapt-ml-slider/issues",
+  "component" : "mlSlider",
+  "targetAttribute": "_mlSlider",
+  "displayName" : "ML Slider",
+  "description": "A question component that allows the learner to position a slider on scale",
+  "main": "/js/adapt-ml-slider.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-component"
+  ],
+  "license": "GPL-3.0"
+}
