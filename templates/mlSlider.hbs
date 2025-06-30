@@ -43,8 +43,12 @@
 
     <div class="slider__item{{#unless _isEnabled}}{{#if _isCorrect}} is-correct{{else}} is-incorrect{{/if}}{{/unless}}">
       <label>
-        <span class="aria-label">
-          {{_globals._components._mlSlider.ariaLabel}}
+        <span class="aria-label visually-hidden">
+          {{#if _globals._components._mlSlider.ariaLabel}}
+            {{_globals._components._mlSlider.ariaLabel}}
+          {{else}}
+            Adjust the slider value
+          {{/if}}
         </span>
         <input
           class="slider__item-input js-slider-item-input"
@@ -55,7 +59,7 @@
           aria-valuenow="{{#if _userAnswer}}{{_userAnswer}}{{else}}{{_scaleStart}}{{/if}}"
           aria-valuemin="{{_scaleStart}}"
           aria-valuemax="{{_scaleEnd}}"
-          aria-label="{{_globals._components._mlSlider.ariaLabel}}"
+          aria-label="{{#if _globals._components._mlSlider.ariaLabel}}{{_globals._components._mlSlider.ariaLabel}}{{else}}Adjust the slider value{{/if}}"
           data-direction="{{#equals _marginDir "right"}}rtl{{/equals}}"
           {{#unless _isEnabled}} disabled{{/unless}} />
       </label>
