@@ -60,6 +60,7 @@
           aria-valuemin="{{_scaleStart}}"
           aria-valuemax="{{_scaleEnd}}"
           aria-label="{{#if _globals._components._mlSlider.ariaLabel}}{{_globals._components._mlSlider.ariaLabel}}{{else}}Adjust the slider value{{/if}}"
+          autocomplete="off"
           data-direction="{{#equals _marginDir "right"}}rtl{{/equals}}"
           {{#unless _isEnabled}} disabled{{/unless}} />
       </label>
